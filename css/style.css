@@ -1,0 +1,525 @@
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background-attachment: fixed;
+    background-image: url('https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.overlay-hidden{
+    background-color: transparent;
+}
+
+.menu{
+    position: fixed;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 4rem;
+    cursor: pointer;
+}
+
+.menu-hidden{
+    display: none;
+}
+
+.main-header{
+    position: fixed;
+    top: 0;
+    right: -40%;
+    width: 40%;
+    background-color: rgba(0, 0, 0, .5);
+    height: 100vh;
+    transition: right 1s ease;
+}
+
+.main-header-display{
+    right: 0;
+}
+
+.nav-bar{
+    height: 100vh;
+}
+
+.nav-bar ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    list-style-type: none;
+}
+
+.nav-bar li{
+    margin: 2rem 0;
+    font-size: 3rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: color .4s ease;
+}
+
+.nav-bar li:hover{
+    color: rgb(223, 223, 22);
+}
+
+.back{
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 4rem;
+    cursor: pointer;
+    transition: transform .4s ease;
+}
+
+.back:hover{
+    transform: rotate(180deg);
+}
+
+.main-container{
+    height: 100%;
+}
+
+.home-wrapper{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-wrapper-hidden{
+    display: none;
+}
+
+.home-heading{
+    font-size: 6rem;
+    margin-left: 2rem;
+    transition: color .4s ease;
+    font-family: 'Piedra', cursive;
+}
+
+.change{
+    color: rgb(223, 223, 22);
+}
+
+.text{
+    font-size: 2rem;
+    margin-top: -3rem;
+    margin-left: 2rem;
+}
+
+.media{
+    margin: 2rem;
+}
+
+.media a{
+    margin-top: -3rem;
+    margin-right: 2rem;
+    color: #fff;
+    font-size: 3rem;
+}
+
+.profile-img{
+    position: fixed;
+    top: 0;
+    left: -60%;
+    width: 60%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left 1s ease;
+}
+
+.profile-img-display{
+    left: 0;
+}
+
+.profile-img-content{
+    width: 20rem; 
+    height: 20rem;  
+}
+
+.profile-img-content img{
+    width: 100%;
+    height: 100%;
+    border: .6rem solid rgb(223, 223, 22);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.about-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: display .4s ease;
+}
+
+.about-wrapper-display{
+    display: flex;
+}
+
+.about-content{
+    width: 60rem;
+    /* background-color: rgba(223, 223, 22, .8); */
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.back-about{
+    font-size: 2.5rem;
+    color: rgba(223, 223, 22, .8);
+    cursor: pointer;
+}
+
+.about-content p{
+    color: rgba(223, 223, 22, .8);
+    font-size: 1.8rem;
+    line-height: 1.4;
+}
+
+.project-wrapper{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .9);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    transition: left .4s ease;
+}
+
+.project-wrapper-display{
+    display: flex;
+}
+
+.project-content{
+    width: 100%;
+   height: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   margin-top: 4rem;
+}
+
+.project-heading{
+    font-size: 3rem;
+    color: rgb(223, 223, 22);
+    position: absolute;
+    top: 0;
+    left: 2rem;
+}
+
+.back-project{
+    float: right;
+    font-size: 3rem;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    cursor: pointer;
+    transition: transform .4s ease;
+}
+
+.back-project:hover{
+    transform: rotate(180deg);
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35rem;
+    height: 25rem;
+    margin-top: 4rem;
+    margin: 3rem;
+    background-color: #fff;
+    box-shadow: .3rem .3rem 1rem #777;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow .6s ease;
+}
+
+.project:hover{
+    box-shadow: 1rem 1rem 1rem #777;
+}
+
+.project img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlayer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+    display: none;
+    transition: display .6s .3s;
+}
+
+.project:hover .overlayer{
+    display: block;
+}
+
+.project:hover .project-text{
+    top: 2rem;
+    transition: top .3s .3s;
+}
+
+
+.project-text{
+    transition: top .6s ease;
+    text-align: center;
+    letter-spacing: .1rem;
+    position: absolute;
+    top: -20rem;
+    z-index: 10;
+}
+
+.project-name{
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: rgb(223, 223, 22);
+}
+
+.project-technologies{
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.link{
+    display: flex;
+    position: absolute;
+    bottom: -5rem;
+    transition: bottom .6s ease;
+}
+
+.project a{
+    font-size: 2rem;
+    color: #fff;
+    border: .3rem solid #333;
+    padding: 0 1rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    margin-left: 1rem;
+    transition: all .6s;
+}
+
+.project a{
+    background-color: #fff;
+    color: #000;
+}
+
+.project:hover .link{
+    bottom: 8rem;
+    transition: bottom .4s .5s;
+}
+
+.contact-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-wrapper-display{
+    display: flex;
+}
+
+.back-contact{
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform .4s;
+}
+
+.back-contact:hover{
+    transform: rotate(180deg);
+}
+
+.contact-content{
+    padding: 5rem 2rem;
+    position: relative;
+    width: 60rem;
+    margin-top: 3rem;
+    /* background-color: rgba(223, 223, 22, .8); */
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+::placeholder{
+    color: #888;
+    font-size: 1.8rem;
+}
+
+input,
+textarea{
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-bottom: .2rem solid rgb(223, 223, 22);
+    border-radius: 2rem;
+    outline: none;
+    background: transparent;
+    color: #fff;
+}
+
+textarea{
+    border-radius: none;
+    resize: none;
+}
+
+input[type=submit]{
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1.3rem;
+}
+
+.center{
+   width: 100%;
+   text-align: center;
+}
+
+.center a{
+    color: rgba(223, 223, 22, .8);
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(223, 223, 22);
+    background-color: rgba(0, 0, 0, .7);
+    padding: 1rem;
+}
+
+@media(max-width: 824px){
+    .project{
+        width: 33rem;
+    }
+}
+
+@media(max-width: 719px){
+    .project{
+        width: 70%;
+    }
+}
+/* , 939px,   , 30rem, 20rem */
+@media(max-width: 1150px){
+   .main-header{
+       width: 50%;
+       right: -50%;
+   }
+
+   .main-header-display{
+       right: 0;
+   }
+
+   .profile-img{
+       width: 50%;
+   }
+}
+
+@media(max-width: 420px){
+    .project a{
+        font-size: 1.3rem;
+    }
+
+    .project-heading{
+        font-size: 2rem;
+    }
+
+    .about-content{
+        width: 80%;
+    }
+
+    .home-heading{
+        font-size: 4rem;
+    }
+
+    .text{
+        font-size: 1.7rem;
+    }
+
+    .media a{
+        font-size: 1.9rem;
+    }
+
+    .profile-img{
+        height: 30vh;
+        width: 100%;
+        top: 0;
+        left: -100%;
+    }
+
+    .profile-img-display{
+        left: 0;
+    }
+
+    .profile-img-content{
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .main-header{
+        height: 70vh;
+        top: 30vh;
+        right: -100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-header-display{
+        right: 0;
+    }
+
+    .nav-bar{
+        margin-top: -6rem;
+    }
+}
+
