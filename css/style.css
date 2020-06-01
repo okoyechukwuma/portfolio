@@ -201,6 +201,24 @@ body{
     line-height: 1.4;
 }
 
+.about-content h2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.about-content li{
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: rgba(223, 223, 22, .8);
+    transition: color .4s;
+    cursor: pointer;
+}
+
+.about-content li:hover{
+    color: #aaa;
+}
+
 .project-wrapper{
     position: absolute;
     width: 100%;
