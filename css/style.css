@@ -468,6 +468,10 @@ footer{
     .project{
         width: 70%;
     }
+    
+    .link a{
+        font-size: 1.1rem;
+    }
 }
 /* , 939px,   , 30rem, 20rem */
 @media(max-width: 1150px){
