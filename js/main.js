@@ -15,7 +15,17 @@ const contactWrapper = document.querySelector('.contact-wrapper');
 const contactBack = document.querySelector('.back-contact');
 const overlay = document.querySelector('.overlay');
 
-
+let date = new Date().getHours();
+let text;
+if (date < 12) {
+    text =" Good Morning Guest!";
+}else if (date < 15) {
+    text =" Good Afternoon Guest!";
+}else if (date < 18) {
+    text =" Good Evening Guest!";
+}else{
+    text =" Good Night Guest!";
+}
 mainMenu.addEventListener('click', () => {
     mainHeader.classList.add('main-header-display');
     profile.classList.add('profile-img-display');
