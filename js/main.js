@@ -26,7 +26,7 @@ if (date < 12) {
 }else{
     text =" Good Night Guest!";
 }
-document.querySelector(".demo).innerHTML = text;
+document.querySelector(".demo").innerHTML = text;
                        
 mainMenu.addEventListener('click', () => {
     mainHeader.classList.add('main-header-display');
