@@ -54,6 +54,11 @@ body{
     right: 0;
 }
 
+.demo{
+    text-align: center;
+    font-size: 2rem;
+}
+
 .nav-bar{
     height: 100vh;
 }
